@@ -14,26 +14,20 @@ export function MobileMenu() {
       <button
         aria-label="Open menu"
         onClick={() => setOpen(true)}
-        className="rounded p-1.5 hover:bg-gray-100 md:hidden"
+        className="rounded p-1.5 hover:bg-gray-100 lg:hidden"
       >
         <Menu className="h-6 w-6 text-jd-text" />
       </button>
 
       {open && (
-        <div className="fixed inset-0 z-[100] md:hidden">
+        <div className="fixed inset-0 z-[100] lg:hidden">
           <div
             className="absolute inset-0 bg-black/40 animate-fade-slide"
             onClick={() => setOpen(false)}
           />
           <div className="absolute right-0 top-0 h-full w-[82%] max-w-sm overflow-y-auto bg-white shadow-2xl">
             <div className="flex items-center justify-between border-b border-jd-border px-4 py-3.5">
-              <Image
-                src="/images/oska-logo.png"
-                alt="OSKA Ventures LLP"
-                width={90}
-                height={36}
-                className="h-9 w-auto object-contain"
-              />
+              <Image src="/images/navbar/jdlogosvg.svg" alt="Justdial" width={112} height={30} unoptimized />
               <button
                 aria-label="Close menu"
                 onClick={() => setOpen(false)}

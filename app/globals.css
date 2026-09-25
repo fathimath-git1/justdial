@@ -16,7 +16,7 @@ html {
 
 body {
   color: var(--foreground);
-  background: var(--background);
+  background: #ededed;
   font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
 }
 

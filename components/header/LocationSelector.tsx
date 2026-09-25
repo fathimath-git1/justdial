@@ -1,18 +1,20 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { MapPin, X, Search } from "lucide-react";
+import Image from "next/image";
+import { X, Search } from "lucide-react";
 import { cities } from "@/lib/data";
 import { cn } from "@/lib/utils";
 
 interface LocationSelectorProps {
   className?: string;
+  compact?: boolean;
 }
 
-export function LocationSelector({ className }: LocationSelectorProps) {
+export function LocationSelector({ className, compact = false }: LocationSelectorProps) {
   const [open, setOpen] = useState(false);
   const [query, setQuery] = useState("");
-  const [selected, setSelected] = useState("Perinthalmanna Road Anakkayam");
+  const [selected, setSelected] = useState("Malappuram");
   const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -35,9 +37,9 @@ export function LocationSelector({ className }: LocationSelectorProps) {
         type="button"
         aria-label="Choose your location"
         onClick={() => setOpen((v) => !v)}
-        className="flex w-full items-center gap-1.5 rounded-md border border-gray-300 bg-gray-50 px-3 py-2.5 text-left text-sm text-gray-700 hover:bg-gray-100 transition-colors duration-200"
+        className={`flex w-full items-center gap-2 rounded-md border border-gray-300 bg-gray-50 px-3 text-left text-gray-700 hover:bg-gray-100 transition-colors duration-200 ${compact ? "h-12 text-xs" : "h-[51px] text-[13px]"}`}
       >
-        <MapPin className="h-4 w-4 shrink-0 text-gray-500" />
+        <Image src="/images/navbar/location_icon.svg" alt="" width={14} height={18} unoptimized className={`${compact ? "h-[22px] w-[18px]" : "h-[18px] w-[14px]"} shrink-0`} />
         <span className="truncate">{selected}</span>
       </button>
 

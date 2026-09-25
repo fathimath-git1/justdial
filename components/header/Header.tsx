@@ -1,69 +1,61 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
-import { Mail, Megaphone, TrendingUp, Bell } from "lucide-react";
+import { useEffect, useState } from "react";
 import { SearchBar } from "./SearchBar";
 import { LocationSelector } from "./LocationSelector";
 import { MobileMenu } from "./MobileMenu";
 
 export function Header() {
+  const [showSearchHeader, setShowSearchHeader] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setShowSearchHeader(window.scrollY > 150);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  const Logo = ({ compact = false }: { compact?: boolean }) => (
+    <Link href="/" aria-label="Justdial home" className="shrink-0">
+      <Image src="/images/navbar/jdlogosvg.svg" alt="Justdial" width={compact ? 98 : 98} height={26} priority unoptimized className="h-auto w-[98px]" />
+    </Link>
+  );
+
+  const DesktopNav = ({ compact = false }: { compact?: boolean }) => (
+    <nav className="ml-auto hidden shrink-0 items-center gap-4 text-[14px] text-jd-text lg:flex">
+      {!compact && <a href="#" className="flex items-center gap-1 hover:text-jd-blue"><Image src="/images/navbar/nav_language_icon.svg" alt="" width={17} height={24} unoptimized /><span>EN</span><Image src="/images/navbar/down_arrow5.svg" alt="" width={8} height={5} unoptimized /></a>}
+      {!compact && <a href="#" className="whitespace-nowrap hover:text-jd-blue">We are Hiring</a>}
+      {!compact && <a href="#" className="whitespace-nowrap hover:text-jd-blue">Investor Relations</a>}
+      <a href="#" aria-label="Leads" className="shrink-0"><Image src="/images/navbar/leads-button-animation.GIF" alt="Leads" width={77} height={28} unoptimized className="h-7 w-[77px]" /></a>
+      <a href="#" className="flex items-center gap-1 whitespace-nowrap hover:text-jd-blue"><Image src="/images/navbar/nav_advertise_icon.svg" alt="" width={16} height={16} unoptimized />Advertise</a>
+      <a href="#" className="flex flex-col items-start leading-tight hover:text-jd-blue"><span className="ml-5 rounded-sm bg-[#ef233c] px-1 text-[8px] font-bold uppercase text-white">Business</span><span className="flex items-center gap-1"><Image src="/images/navbar/nav_listing_icon.svg" alt="" width={16} height={16} unoptimized />Free Listing</span></a>
+      <button aria-label="Notifications" className="rounded-full p-1 hover:bg-gray-100"><Image src="/images/navbar/notify_icon.svg" alt="" width={19} height={19} unoptimized /></button>
+      <button className="whitespace-nowrap rounded-md bg-[#0876ce] px-4 py-1.5 font-semibold text-white hover:bg-sky-600">Login / Sign Up</button>
+    </nav>
+  );
+
   return (
-    <header className="sticky top-0 z-40 border-b border-jd-border bg-white">
-      <div className="mx-auto flex max-w-content items-center gap-3 px-4 py-3 md:gap-5 md:px-6">
-        <Link href="/" className="shrink-0" aria-label="OSKA Ventures LLP home">
-          <Image
-            src="/images/oska-logo.png"
-            alt="OSKA Ventures LLP"
-            width={120}
-            height={48}
-            className="h-12 w-auto object-contain"
-            priority
-          />
-        </Link>
-
-        {/* Desktop location + search */}
-        <div className="hidden flex-1 items-center gap-2.5 md:flex">
-          <LocationSelector className="w-[260px] shrink-0" />
-          <SearchBar />
+    <>
+      <header className="relative z-30 border-b border-jd-border bg-white">
+        <div className="mx-auto flex h-[83px] w-full items-center gap-3 px-4 md:gap-5 md:pl-[26px] md:pr-[58px]">
+          <Logo />
+          <DesktopNav />
+          <MobileMenu />
         </div>
-
-        {/* Desktop right nav */}
-        <nav className="ml-auto hidden shrink-0 items-center gap-4 text-sm text-jd-text md:flex">
-          <a
-            href="#"
-            className="flex items-center gap-1.5 rounded-md border border-gray-300 px-3 py-1.5 hover:bg-gray-50 transition-colors duration-150"
-          >
-            <Mail className="h-4 w-4" />
-            Leads
-          </a>
-          <a href="#" className="flex items-center gap-1.5 hover:text-jd-blue transition-colors duration-150">
-            <Megaphone className="h-4 w-4" />
-            Advertise
-          </a>
-          <a href="#" className="flex flex-col items-start leading-tight hover:text-jd-blue transition-colors duration-150">
-            <span className="rounded-sm bg-jd-orange px-1 text-[10px] font-bold uppercase text-white">
-              Business
-            </span>
-            <span className="flex items-center gap-1">
-              <TrendingUp className="h-4 w-4" />
-              Free Listing
-            </span>
-          </a>
-          <button aria-label="Notifications" className="rounded-full p-1.5 hover:bg-gray-100 transition-colors duration-150">
-            <Bell className="h-5 w-5" />
-          </button>
-          <button className="rounded-md bg-jd-blue px-4 py-2 font-semibold text-white hover:bg-sky-600 transition-colors duration-150">
-            Login / Sign Up
-          </button>
-        </nav>
-
-        <MobileMenu />
+      </header>
+      <div className={`fixed inset-x-0 top-0 z-50 border-b border-jd-border bg-white shadow-sm transition-transform duration-200 ${showSearchHeader ? "translate-y-0" : "-translate-y-full"}`} aria-hidden={!showSearchHeader}>
+        <div className="mx-auto flex w-full items-center gap-3 px-4 py-2 md:pl-[44px] md:pr-[20px]">
+          <Logo compact />
+          <div className="ml-5 hidden shrink-0 items-center gap-4 lg:flex">
+            <LocationSelector compact className="w-[246px] shrink-0" />
+            <div className="w-[440px]"><SearchBar compact /></div>
+          </div>
+          <DesktopNav compact />
+          <div className="flex min-w-0 flex-1 flex-col gap-1.5 lg:hidden"><LocationSelector compact /><SearchBar compact /></div>
+        </div>
       </div>
-
-      {/* Mobile location + search row */}
-      <div className="flex flex-col gap-2 border-t border-jd-border px-4 py-2.5 md:hidden">
-        <LocationSelector />
-        <SearchBar />
-      </div>
-    </header>
+    </>
   );
 }

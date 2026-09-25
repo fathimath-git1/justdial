@@ -1,7 +1,8 @@
 "use client";
 
 import { useMemo, useRef, useState, useEffect } from "react";
-import { Mic, Search } from "lucide-react";
+import Image from "next/image";
+import { Search } from "lucide-react";
 
 const BASE_SUGGESTIONS = [
   "Restaurants", "Restaurants Near Me", "Best Restaurants", "Restaurants in Kochi",
@@ -10,7 +11,7 @@ const BASE_SUGGESTIONS = [
   "Spa & Salons", "Spa Near Me", "Best Spa & Salons", "Spa & Salons in Kochi",
 ];
 
-export function SearchBar() {
+export function SearchBar({ compact = false }: { compact?: boolean }) {
   const [value, setValue] = useState("");
   const [open, setOpen] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
@@ -39,7 +40,7 @@ export function SearchBar() {
 
   return (
     <div ref={containerRef} className="relative flex-1">
-      <div className="flex items-center gap-2 rounded-md border border-gray-300 bg-white pl-3.5 pr-1.5 py-2.5 focus-within:border-jd-blue focus-within:ring-1 focus-within:ring-jd-blue transition-colors duration-200">
+      <div className={`flex items-center gap-2 rounded-md border border-gray-300 bg-white pl-4 pr-2 focus-within:border-jd-blue focus-within:ring-1 focus-within:ring-jd-blue transition-colors duration-200 ${compact ? "h-12" : "h-[51px]"}`}>
         <input
           value={value}
           onChange={(e) => {
@@ -49,21 +50,21 @@ export function SearchBar() {
           onFocus={() => value && setOpen(true)}
           placeholder="Search for Spa & Salons"
           aria-label="Search for businesses and services"
-          className="w-full text-sm text-gray-700 placeholder:text-gray-400 outline-none"
+          className={`w-full text-gray-700 placeholder:text-gray-400 outline-none ${compact ? "text-[13px]" : "text-[13px]"}`}
         />
         <button
           type="button"
           aria-label="Search by voice"
-          className="shrink-0 rounded-full p-1.5 hover:bg-gray-100 transition-colors duration-150"
+          className="flex h-10 w-9 shrink-0 items-center justify-center hover:bg-gray-100 transition-colors duration-150"
         >
-          <Mic className="h-[18px] w-[18px] text-jd-blue" />
+          <Image src="/images/navbar/jdvoice_mic.gif" alt="" width={24} height={34} unoptimized className={`object-contain ${compact ? "h-6 w-[18px]" : "h-6 w-4"}`} />
         </button>
         <button
           type="button"
           aria-label="Search"
-          className="flex shrink-0 items-center justify-center rounded-md bg-jd-orange p-2 text-white hover:bg-orange-600 transition-colors duration-150"
+          className={`flex shrink-0 items-center justify-center rounded-md bg-jd-orange text-white hover:bg-orange-600 transition-colors duration-150 ${compact ? "h-9 w-9" : "h-9 w-9"}`}
         >
-          <Search className="h-[18px] w-[18px]" />
+          <Image src="/images/navbar/search_white_icon.svg" alt="" width={16} height={16} unoptimized className="h-4 w-4" />
         </button>
       </div>
 

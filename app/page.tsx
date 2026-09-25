@@ -7,6 +7,7 @@ import { TrendingSearches } from "@/components/sections/TrendingSearches";
 import { LatestMovies } from "@/components/sections/LatestMovies";
 import { TouristPlaces } from "@/components/sections/TouristPlaces";
 import { PopularSearches } from "@/components/sections/PopularSearches";
+import { RainyDayEssentials } from "@/components/sections/RainyDayEssentials";
 import { NewsSection } from "@/components/sections/NewsSection";
 import { ServicesGrid } from "@/components/sections/ServicesGrid";
 import { PopularCategories } from "@/components/sections/PopularCategories";
@@ -23,7 +24,7 @@ function Divider() {
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-white">
+    <main className="mx-auto min-h-screen w-full bg-white md:w-[calc(100%-40px)]">
       <Header />
       <SideRail />
 
@@ -39,6 +40,7 @@ export default function Home() {
       <LatestMovies />
       <TouristPlaces />
       <PopularSearches />
+      <RainyDayEssentials />
       <Divider />
       <NewsSection />
       <Divider />

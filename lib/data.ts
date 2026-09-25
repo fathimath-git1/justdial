@@ -1,4 +1,4 @@
-import type {
+﻿import type {
   Category,
   CardItem,
   TravelModeItem,
@@ -41,121 +41,133 @@ export const popularCities: string[] = [
 
 // Primary top row of category icons (matches hero category strip)
 export const topCategories: Category[] = [
-  { title: "Restaurants", iconKey: "utensils" },
-  { title: "Hotels", iconKey: "hotel" },
-  { title: "Beauty Spa", iconKey: "sparkles" },
-  { title: "Home Decor", iconKey: "armchair" },
-  { title: "Ask Astro", iconKey: "sun", badge: "Beta" },
-  { title: "Wedding Planning", iconKey: "heart" },
-  { title: "Education", iconKey: "graduation-cap" },
-  { title: "Rent & Hire", iconKey: "key" },
-  { title: "Hospitals", iconKey: "building-2" },
-  { title: "Contractors", iconKey: "hard-hat" },
+  { title: "Restaurants", iconKey: "utensils", image: "/images/category-icons/restaurant-2022%20(1).svg" },
+  { title: "Hotels", iconKey: "hotel", image: "/images/category-icons/hotel-2022.svg" },
+  { title: "Beauty Spa", iconKey: "sparkles", image: "/images/category-icons/beauty.svg" },
+  { title: "Home Decor", iconKey: "armchair", image: "/images/category-icons/homedecor.svg" },
+  { title: "Ask Astro", iconKey: "sun", image: "/images/category-icons/hotkey_astro.gif", badge: "Beta" },
+  { title: "Wedding Planning", iconKey: "heart", image: "/images/category-icons/hotkey_wedding_icon.gif" },
+  { title: "Education", iconKey: "graduation-cap", image: "/images/category-icons/education.svg" },
+  { title: "Rent & Hire", iconKey: "key", image: "/images/category-icons/renthire.svg" },
+  { title: "Hospitals", iconKey: "building-2", image: "/images/category-icons/hospital_2023.svg" },
+  { title: "Contractors", iconKey: "hard-hat", image: "/images/category-icons/contractor-2022.svg" },
 ];
 
 // Second row (revealed / used on scroll-fixed strip)
 export const secondaryCategories: Category[] = [
-  { title: "Pet Shops", iconKey: "dog" },
-  { title: "PG/Hostels", iconKey: "bed-double" },
-  { title: "Estate Agent", iconKey: "home" },
-  { title: "Dentists", iconKey: "smile" },
-  { title: "Gym", iconKey: "dumbbell" },
-  { title: "Loans", iconKey: "landmark" },
-  { title: "Event Organisers", iconKey: "party-popper" },
-  { title: "Driving Schools", iconKey: "car" },
-  { title: "Packers & Movers", iconKey: "truck" },
+  { title: "Pet Shops", iconKey: "dog", image: "/images/category-icons/pet_shops_2023.svg" },
+  { title: "PG/Hostels", iconKey: "bed-double", image: "/images/category-icons/pg-hostels-rooms.svg" },
+  { title: "Estate Agent", iconKey: "home", image: "/images/category-icons/estate-agent.svg" },
+  { title: "Dentists", iconKey: "smile", image: "/images/category-icons/dentist_2023.svg" },
+  { title: "Gym", iconKey: "dumbbell", image: "/images/category-icons/gym_2023.svg" },
+  { title: "Loans", iconKey: "landmark", image: "/images/category-icons/loans.svg" },
+  { title: "Event Organisers", iconKey: "party-popper", image: "/images/category-icons/eventorganizers.svg" },
+  { title: "Driving Schools", iconKey: "car", image: "/images/category-icons/driving_school_2023.svg" },
+  { title: "Packers & Movers", iconKey: "truck", image: "/images/category-icons/packers_movers_2023.svg" },
   { title: "Popular Categories", iconKey: "menu" },
 ];
 
 export const heroBanners = [
   {
-    title: "Time to fly at Lowest Airfares",
-    subtitle: "Powered by EaseMyTrip.com",
-    cta: "Book Now",
+    title: "Flight deals",
+    image: "/images/hero-assets/banner_webflight_2024.webp",
     gradient: "from-sky-300 via-sky-200 to-sky-100",
   },
   {
-    title: "List your Business for Free",
-    subtitle: "Get more customers with Justdial",
-    cta: "Get Started",
+    title: "Hotels",
+    image: "/images/hero-assets/banner_hotels_2024.webp",
     gradient: "from-orange-300 via-orange-200 to-orange-100",
   },
   {
-    title: "Best Deals near you",
-    subtitle: "Compare & Save on every purchase",
-    cta: "Explore",
+    title: "Interior Designers",
+    image: "/images/hero-assets/banner_interiordesigners_2024.webp",
+    gradient: "from-slate-800 to-slate-900",
+  },
+  {
+    title: "Packers and Movers",
+    image: "/images/hero-assets/banner_packersmovers_2024.webp",
     gradient: "from-emerald-300 via-emerald-200 to-emerald-100",
   },
 ];
 
 export const promoCards: CardItem[] = [
-  { title: "B2B", gradient: "from-blue-700 to-blue-500", emoji: "🤝" },
-  { title: "REPAIRS & SERVICES", gradient: "from-indigo-800 to-indigo-500", emoji: "🔧" },
-  { title: "REAL ESTATE", gradient: "from-violet-700 to-violet-400", emoji: "🏢" },
-  { title: "DOCTORS", gradient: "from-emerald-700 to-emerald-500", emoji: "🩺" },
+  { title: "B2B", gradient: "from-blue-700 to-blue-500", image: "/images/hero-assets/b2b_square_hotkey.webp" },
+  { title: "REPAIRS & SERVICES", gradient: "from-indigo-800 to-indigo-500", image: "/images/hero-assets/repair_square_hotkey.webp" },
+  { title: "REAL ESTATE", gradient: "from-violet-700 to-violet-500", image: "/images/hero-assets/realestate_square_hotkey.webp" },
+  { title: "DOCTORS", gradient: "from-emerald-700 to-emerald-600", image: "/images/hero-assets/doctor_square_hotkey.webp" },
 ];
 
 export const weddingRequisites: CardItem[] = [
-  { title: "Banquet Halls", image: "/images/categories/banquet-halls.png" },
-  { title: "Bridal Requisite", image: "/images/categories/bridal-requisite.jpg" },
-  { title: "Caterers", image: "/images/categories/caterers.jpg" },
+  { title: "Banquet Halls", image: "/images/categories/banquethalls_rectangle_2024.webp" },
+  { title: "Bridal Requisite", image: "/images/categories/bridalrequisite_rectangle_2024.webp" },
+  { title: "Caterers", image: "/images/categories/caterers_rectangle_2024.webp" },
 ];
 
 export const beautySpa: CardItem[] = [
-  { title: "Beauty Parlours", image: "/images/categories/beauty-parlours.jpg" },
-  { title: "Spa & Massages", image: "/images/categories/spa-massages.jpg" },
-  { title: "Salons", image: "/images/categories/salons.jpg" },
+  { title: "Beauty Parlours", image: "/images/categories/beautyparlours_rectangle_2024.webp" },
+  { title: "Spa & Massages", image: "/images/categories/spamassages_rectangle_2024.webp" },
+  { title: "Salons", image: "/images/categories/salons_rectangle_2024.webp" },
 ];
 
 export const repairsServices: CardItem[] = [
-  { title: "AC Service", image: "/images/categories/ac-service.jpg" },
-  { title: "Car Service", image: "/images/categories/car-service.jpg" },
-  { title: "Bike Service", image: "/images/categories/bike-service.jpg" },
+  { title: "AC Service", image: "/images/categories/hkim_acrepair.png" },
+  { title: "Car Service", image: "/images/categories/carservice_rectangle_2024.webp" },
+  { title: "Bike Service", image: "/images/categories/bikeservice_rectangle_2024.webp" },
 ];
 
 export const dailyNeeds: CardItem[] = [
-  { title: "Movies", image: "/images/categories/movies.jpg" },
-  { title: "Grocery", image: "/images/categories/grocery.jpg" },
-  { title: "Electricians", image: "/images/categories/electricians.jpg" },
+  { title: "Movies", image: "/images/categories/hkim_movies.png" },
+  { title: "Grocery", image: "/images/categories/grocery_rectangle_2024.webp" },
+  { title: "Electricians", image: "/images/categories/electricians_rectangle_2024.webp" },
 ];
 
 export const travelModes: TravelModeItem[] = [
-  { title: "Flight", note: "Powered By Easemytrip.com", image: "/images/travel/flight.png" },
-  { title: "Bus", note: "Affordable Rides", image: "/images/travel/bus.png" },
-  { title: "Train", note: "", image: "/images/travel/train.png" },
-  { title: "Hotel", note: "Budget-friendly Stay", image: "/images/travel/hotel.png" },
-  { title: "Car Rentals", note: "Drive Easy Anywhere", image: "/images/travel/car-rentals.png" },
+  { title: "Flight", note: "Powered By Easemytrip.com", image: "/images/travel/icons/bt_flight.svg" },
+  { title: "Bus", note: "Affordable Rides", image: "/images/travel/icons/bt_bus.svg" },
+  { title: "Train", note: "", image: "/images/travel/icons/bt_train.svg" },
+  { title: "Hotel", note: "Budget-friendly Stay", image: "/images/travel/icons/bt_hotels.svg" },
+  { title: "Car Rentals", note: "Drive Easy Anywhere", image: "/images/travel/icons/bt_carhire.svg" },
 ];
 
 export const trendingSearchesNearYou: PopularSearchItem[] = [
-  { title: "Beauty Parlours", cta: "Explore", image: "/images/trending/beauty-parlours.jpg" },
-  { title: "Paying Guest Accommodations...", cta: "Explore", image: "/images/trending/pg-accommodations.jpg" },
-  { title: "Income Tax Consultants", cta: "Explore", image: "/images/trending/income-tax.jpg" },
-  { title: "Mehendi Artists At Home", cta: "Explore", image: "/images/trending/mehendi.jpg" },
+  { title: "Beauty Parlours", cta: "Explore", image: "/images/trending/10042247.webp" },
+  { title: "Paying Guest Accommodations...", cta: "Explore", image: "/images/trending/11364923.avif" },
+  { title: "Income Tax Consultants", cta: "Explore", image: "/images/trending/10263305.avif" },
+  { title: "Mehendi Artists At Home", cta: "Explore", image: "/images/trending/12057018.avif" },
 ];
 
 export const latestMovies: MovieItem[] = [
-  { title: "Bethlehem Kudumba Unit (Malayalam Movie)", lang: "Malayalam · 2D", rating: 80, image: "/images/movies/bethlehem-kudumba-unit.jpg" },
-  { title: "Pradhama Drishtiya Kuttakkar (Malayalam Movie)", lang: "Malayalam · 2D", image: "/images/movies/pradhama-drishtiya-kuttakkar.jpg" },
-  { title: "Mandaadi (Tamil Movie)", lang: "Tamil · 2D", rating: 84, image: "/images/movies/mandaadi.jpg" },
-  { title: "Ottam Thullal (Malayalam Movie)", lang: "Malayalam · 2D", image: "/images/movies/ottam-thullal.jpg" },
-  { title: "Aasha (2026 Film) (Malayalam Movie)", lang: "Malayalam · 2D", image: "/images/movies/aasha.jpg" },
+  { title: "Bethlehem Kudumba Unit (Malayalam Movie)", lang: "Malayalam · 2D", rating: 80, image: "/images/movies/centralized_162839122026_06_15_12_20_28_220.jpg" },
+  { title: "Pradhama Drishtiya Kuttakkar (Malayalam Movie)", lang: "Malayalam · 2D", image: "/images/movies/centralized_162961822026_08_18_10_03_26_220.jpg" },
+  { title: "Its A Medical Miracle (Malayalam Movie)", lang: "Malayalam · 2D", image: "/images/movies/centralized_163043012026_09_04_04_46_48_220.jpg" },
+  { title: "Mandaadi (Tamil Movie)", lang: "Tamil · 2D", rating: 84, image: "/images/movies/centralized_161949072025_07_04_01_21_36_220.jpg" },
+  { title: "Aasha (2026 Film) (Malayalam Movie)", lang: "Malayalam · 2D", image: "/images/movies/centralized_163053682026_09_10_10_02_18_220.jpg" },
 ];
 
 export const touristPlaces: TouristPlace[] = [
-  { name: "Ooty", image: "/images/tourist/ooty.jpg" },
-  { name: "Coimbatore", image: "/images/tourist/coimbatore.jpg" },
-  { name: "Coorg", image: "/images/tourist/coorg.jpg" },
-  { name: "Munnar", image: "/images/tourist/munnar.jpg" },
-  { name: "Wayanad", image: "/images/tourist/wayanad.jpg" },
+  { name: "Ooty", image: "/images/tourist/Explorecities_Ooty.png" },
+  { name: "Coimbatore", image: "/images/tourist/Explorecities_Coimbatore.png" },
+  { name: "Coorg", image: "/images/tourist/Explorecities_Coorg.png" },
+  { name: "Munnar", image: "/images/tourist/Explorecities_Munnar.png" },
 ];
 
 export const popularSearches: PopularSearchItem[] = [
-  { title: "Solar Panel Dealers", cta: "Enquire Now", image: "/images/popular/solar-panel.jpg" },
-  { title: "Beauty Parlours", cta: "Enquire Now", image: "/images/popular/beauty-parlours.jpg" },
-  { title: "Home Nursing Services", cta: "Explore", image: "/images/popular/home-nursing.jpg" },
-  { title: "Dentists", cta: "Explore", image: "/images/popular/dentists.jpg" },
-  { title: "Travel Agents", cta: "Explore", image: "/images/popular/travel-agents.jpg" },
+  { title: "Solar Panel Dealers", cta: "Enquire Now", image: "/images/popular/10444071.jpg" },
+  { title: "Beauty Parlours", cta: "Enquire Now", image: "/images/popular/10042247.jpg" },
+  { title: "Home Nursing Services", cta: "Explore", image: "/images/popular/10250587.jpg" },
+  { title: "Dentists", cta: "Explore", image: "/images/popular/10156331.jpg" },
+  { title: "Travel Agents", cta: "Explore", image: "/images/popular/10496380.jpg" },
+  { title: "Electricians", cta: "Explore", image: "/images/popular/10892680.jpg" },
+  { title: "Grocery Stores", cta: "Explore", image: "/images/popular/10408936.jpg" },
+];
+
+export const rainyDayEssentials: PopularSearchItem[] = [
+  { title: "Coffee Shops", cta: "Explore", image: "/images/rainy-day/10104727.avif" },
+  { title: "Tea Stalls", cta: "Explore", image: "/images/rainy-day/10853304.avif" },
+  { title: "Plumbing Contractors", cta: "Explore", image: "/images/rainy-day/10378056.avif" },
+  { title: "Waterproofing Material Dealers", cta: "Explore", image: "/images/rainy-day/10533883.avif" },
+  { title: "Tarpaulin Dealers", cta: "Explore", image: "/images/rainy-day/tarpaulin-dealers.webp" },
+  { title: "Rainwear Dealers", cta: "Explore", image: "/images/rainy-day/10101239.avif" },
 ];
 
 export const newsItems: NewsItem[] = [
@@ -296,3 +308,7 @@ export const jdVerticals: { heading: string; items: string[] }[] = [
   { heading: "Cricket", items: ["Cricket", "Apparel", "Construction & Real Estate", "Entertainment", "Housekeeping & Facility Management", "Office & School Supplies", "Rubber & Plastics", "Travel"] },
   { heading: "Guides", items: ["Guides", "Astrology", "Education", "Events & Wedding", "Industrial Plants & Machinery", "Packaging & Printing", "Security & Protection", "Watches & Eyewear"] },
 ];
+
+
+
+
