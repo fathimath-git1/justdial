@@ -17,16 +17,20 @@ export function TouristPlaces() {
               href="#"
               className="group flex h-[105px] min-w-0 items-center overflow-hidden rounded-md border border-jd-border transition-all duration-200 hover:border-jd-blue hover:shadow-cardHover"
             >
-              <div className="relative h-full w-[104px] shrink-0 overflow-hidden bg-gray-100">
-                <Image
-                  src={place.image}
-                  alt={place.name}
-                  fill
-                  unoptimized
-                  sizes="104px"
-                  className="object-cover transition-transform duration-200 group-hover:scale-105"
-                />
-              </div>
+             <div className="relative h-full w-[104px] shrink-0 overflow-hidden bg-gray-100">
+  {place.image ? (
+    <Image
+      src={place.image}
+      alt={place.name}
+      fill
+      unoptimized
+      sizes="104px"
+      className="object-cover transition-transform duration-200 group-hover:scale-105"
+    />
+  ) : (
+    <div className="h-full w-full bg-gray-200" />
+  )}
+</div>
               <div className="min-w-0 px-[14px]">
                 <p className="text-[18px] font-semibold text-jd-text">{place.name}</p>
                 <span className="mt-1 flex items-center text-[15px] font-medium text-jd-blue group-hover:underline">
