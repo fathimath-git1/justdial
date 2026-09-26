@@ -14,12 +14,12 @@ export function Footer() {
             <h3 className="mb-3 text-base font-bold text-jd-text">Quick Links</h3>
             <div className="grid grid-cols-2 gap-x-6 gap-y-2 text-sm text-gray-600">
               {col1.map((l) => (
-                <a key={l.label} href={l.href} className="hover:text-jd-blue hover:underline">
+                <a key={l.label} href={l.href} className="break-words hover:text-jd-blue hover:underline">
                   {l.label}
                 </a>
               ))}
               {col2.map((l) => (
-                <a key={l.label} href={l.href} className="hover:text-jd-blue hover:underline">
+                <a key={l.label} href={l.href} className="break-words hover:text-jd-blue hover:underline">
                   {l.label}
                 </a>
               ))}
@@ -32,7 +32,7 @@ export function Footer() {
               {jdVerticals.map((group) => (
                 <div key={group.heading} className="space-y-2 text-sm text-gray-600">
                   {group.items.map((item) => (
-                    <a key={item} href="#" className="block hover:text-jd-blue hover:underline">
+                    <a key={item} href="#" className="block break-words hover:text-jd-blue hover:underline">
                       {item}
                     </a>
                   ))}

@@ -24,7 +24,7 @@ export function Header() {
   );
 
   const DesktopNav = ({ compact = false }: { compact?: boolean }) => (
-    <nav className="ml-auto hidden shrink-0 items-center gap-4 text-[14px] text-jd-text lg:flex">
+    <nav className={`ml-auto hidden shrink-0 items-center gap-4 text-[14px] text-jd-text ${compact ? "2xl:flex" : "lg:flex"}`}>
       {!compact && <a href="#" className="flex items-center gap-1 hover:text-jd-blue"><Image src="/images/navbar/nav_language_icon.svg" alt="" width={17} height={24} unoptimized /><span>EN</span><Image src="/images/navbar/down_arrow5.svg" alt="" width={8} height={5} unoptimized /></a>}
       {!compact && <a href="#" className="whitespace-nowrap hover:text-jd-blue">We are Hiring</a>}
       {!compact && <a href="#" className="whitespace-nowrap hover:text-jd-blue">Investor Relations</a>}
@@ -48,12 +48,12 @@ export function Header() {
       <div className={`fixed inset-x-0 top-0 z-50 border-b border-jd-border bg-white shadow-sm transition-transform duration-200 ${showSearchHeader ? "translate-y-0" : "-translate-y-full"}`} aria-hidden={!showSearchHeader}>
         <div className="mx-auto flex w-full items-center gap-3 px-4 py-2 md:pl-[44px] md:pr-[20px]">
           <Logo compact />
-          <div className="ml-5 hidden shrink-0 items-center gap-4 lg:flex">
+          <div className="ml-5 hidden shrink-0 items-center gap-4 2xl:flex">
             <LocationSelector compact className="w-[246px] shrink-0" />
             <div className="w-[440px]"><SearchBar compact /></div>
           </div>
           <DesktopNav compact />
-          <div className="flex min-w-0 flex-1 flex-col gap-1.5 lg:hidden"><LocationSelector compact /><SearchBar compact /></div>
+          <div className="flex min-w-0 flex-1 flex-col gap-1.5 2xl:hidden"><LocationSelector compact /><SearchBar compact /></div>
         </div>
       </div>
     </>

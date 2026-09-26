@@ -17,7 +17,13 @@ function PipeList({ items }: { items: string[] }) {
           <a href="#" className="hover:text-jd-blue hover:underline">
             {item}
           </a>
-          {i < items.length - 1 && <span className="mx-1.5 text-gray-300">|</span>}
+          {i < items.length - 1 && (
+            <>
+              {" "}
+              <span className="mx-1.5 text-gray-300">|</span>
+              {" "}
+            </>
+          )}
         </span>
       ))}
     </p>
@@ -31,13 +37,13 @@ export function PopularCategories() {
     <section className="mx-auto max-w-content px-4 py-6 md:px-6">
       <h2 className="mb-4 text-xl font-bold text-jd-text">Popular Categories</h2>
 
-      <div className="flex gap-1 overflow-x-auto no-scrollbar border-b border-jd-border">
+      <div className="flex flex-wrap gap-1 border-b border-jd-border">
         {popularCategoryTabs.map((tab, i) => (
           <button
             key={tab.label}
             onClick={() => setActiveTab(i)}
             className={cn(
-              "shrink-0 whitespace-nowrap px-4 py-3 text-sm font-semibold transition-colors duration-150",
+              "min-w-0 grow basis-[calc(50%-0.25rem)] whitespace-normal px-2 py-3 text-center text-sm font-semibold transition-colors duration-150 sm:px-3 md:basis-auto md:grow-0 md:whitespace-nowrap md:px-4",
               activeTab === i
                 ? "border-b-2 border-jd-blue text-jd-text"
                 : "text-gray-500 hover:text-jd-text"

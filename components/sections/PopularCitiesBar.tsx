@@ -10,7 +10,13 @@ export function PopularCitiesBar() {
             <a href="#" className="hover:text-jd-blue hover:underline">
               {city}
             </a>
-            {i < popularCities.length - 1 && <span className="mx-1.5 text-gray-300">|</span>}
+            {i < popularCities.length - 1 && (
+              <>
+                {" "}
+                <span className="mx-1.5 text-gray-300">|</span>
+                {" "}
+              </>
+            )}
           </span>
         ))}
       </p>

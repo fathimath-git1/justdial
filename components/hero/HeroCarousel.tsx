@@ -31,9 +31,9 @@ export function HeroCarousel() {
         </div>
         <button className="hidden shrink-0 rounded-md border border-gray-300 px-6 py-2 text-sm md:ml-auto md:mr-[42px] md:mt-5 md:block">Download App</button>
       </div>
-      <div className="grid grid-cols-2 gap-2.5 sm:gap-3 xl:w-[95%] xl:grid-cols-[4fr_1fr_1fr_1fr_1fr]">
+      <div className="grid min-w-0 grid-cols-2 gap-2.5 sm:gap-3 xl:w-[95%] xl:grid-cols-[4fr_1fr_1fr_1fr_1fr]">
         {/* Main carousel banner */}
-        <div className="relative col-span-2 aspect-[1276/480] overflow-hidden rounded-lg bg-slate-100 sm:aspect-auto sm:h-[200px] xl:col-span-1 xl:h-[240px]">
+        <div className="relative col-span-2 min-w-0 aspect-[1276/480] overflow-hidden rounded-lg bg-slate-100 sm:aspect-auto sm:h-[200px] xl:col-span-1 xl:h-[240px]">
           <Image key={banner.image} src={banner.image} alt={banner.title} width={1276} height={480} priority={index === 0} sizes="(max-width: 768px) 100vw, 60vw" className="h-full w-full animate-fade-slide object-cover" />
           <button aria-label="Previous banner" onClick={() => setIndex((index - 1 + heroBanners.length) % heroBanners.length)} className="absolute left-3 top-1/2 rounded-full bg-black/40 p-2 text-white hover:bg-black/60"><ChevronRight className="h-5 w-5 rotate-180" /></button>
           <button aria-label="Next banner" onClick={() => setIndex((index + 1) % heroBanners.length)} className="absolute right-3 top-1/2 rounded-full bg-black/40 p-2 text-white hover:bg-black/60"><ChevronRight className="h-5 w-5" /></button>

@@ -10,7 +10,7 @@ export function TouristPlaces() {
           <h2 className="text-[20px] font-semibold leading-tight text-jd-text sm:text-[22px] md:text-[24px]">Explore Top Tourist Places</h2>
           <span className="rounded bg-red-600 px-1.5 py-1 text-[12px] font-bold uppercase leading-none text-white">New</span>
         </div>
-        <div className="grid grid-cols-1 gap-2.5 min-[480px]:grid-cols-2 md:grid-cols-4 md:gap-[14px]">
+        <div className="grid grid-cols-1 gap-2.5 min-[480px]:grid-cols-2 xl:grid-cols-4 xl:gap-[14px]">
           {touristPlaces.map((place) => (
             <a
               key={place.name}
