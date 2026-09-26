@@ -13,7 +13,7 @@ export function LatestMovies() {
         <h2 className="text-[24px] font-semibold leading-tight text-jd-text">Latest Movies &amp; Review</h2>
         <button aria-label="See more movies" className="p-1 text-slate-600"><ChevronRight size={24} strokeWidth={3} /></button>
       </div>
-      <div className="flex justify-center gap-7 overflow-x-auto pb-2 no-scrollbar">
+      <div className="flex justify-start gap-5 overflow-x-auto overscroll-x-contain pb-2 no-scrollbar sm:justify-center sm:gap-7">
         {latestMovies.map((movie) => (
           <article key={movie.title} className="w-[min(248px,78vw)] shrink-0">
             <div

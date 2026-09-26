@@ -17,7 +17,7 @@ export function PopularSearches() {
       <div className="relative">
         <div
           ref={cardsRef}
-          className="flex gap-7 overflow-x-auto no-scrollbar scroll-smooth"
+          className="flex gap-5 overflow-x-auto overscroll-x-contain no-scrollbar scroll-smooth sm:gap-7"
         >
           {popularSearches.map((item) => (
             <article

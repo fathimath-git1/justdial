@@ -4,8 +4,8 @@ import { trendingSearchesNearYou } from "@/lib/data";
 export function TrendingSearches() {
   return (
     <section className="mx-auto w-full max-w-[1720px] px-4 py-6 md:px-6">
-      <div className="rounded-xl border border-jd-border bg-white p-5 md:px-[38px] md:pb-[38px] md:pt-[36px]">
-        <h3 className="flex items-center gap-2 text-[30px] font-semibold leading-tight text-jd-text">
+      <div className="rounded-xl border border-jd-border bg-white p-4 sm:p-5 md:px-[38px] md:pb-[38px] md:pt-[36px]">
+        <h3 className="flex flex-wrap items-center gap-2 text-[22px] font-semibold leading-tight text-jd-text sm:text-[26px] md:text-[30px]">
           Trending Searches Near You
           <span className="rounded bg-red-600 px-1.5 py-0.5 text-[14px] font-bold uppercase text-white">
             New
@@ -34,7 +34,7 @@ export function TrendingSearches() {
                 ) : null}
               </div>
               <div className="min-w-0 flex-1 px-[18px] py-2">
-                <p className="line-clamp-2 text-[22px] font-semibold leading-tight text-jd-text">
+                <p className="line-clamp-2 text-[17px] font-semibold leading-tight text-jd-text sm:text-[19px] md:text-[22px]">
                   {item.title}
                 </p>
                 <span className="mt-1 flex items-center text-[15px] font-medium text-jd-blue group-hover:underline">

@@ -39,7 +39,7 @@ export function Header() {
   return (
     <>
       <header className="relative z-30 border-b border-jd-border bg-white">
-        <div className="mx-auto flex h-[83px] w-full items-center gap-3 px-4 md:gap-5 md:pl-[26px] md:pr-[58px]">
+        <div className="mx-auto flex h-[64px] w-full items-center gap-3 px-3 sm:h-[72px] sm:px-4 md:h-[83px] md:gap-5 md:pl-[26px] md:pr-[58px]">
           <Logo />
           <DesktopNav />
           <MobileMenu />

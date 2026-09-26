@@ -30,7 +30,7 @@ export function RainyDayEssentials() {
         <div className="relative mt-[26px]">
           <div
             ref={cardsRef}
-            className="flex gap-[14px] overflow-x-auto no-scrollbar scroll-smooth"
+            className="flex gap-[14px] overflow-x-auto overscroll-x-contain no-scrollbar scroll-smooth"
           >
             {rainyDayEssentials.map((item) => (
               <a

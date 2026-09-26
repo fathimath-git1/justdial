@@ -44,7 +44,7 @@ export function Footer() {
       </div>
 
       <div className="border-t border-jd-border">
-        <div className="mx-auto max-w-content px-4 py-4 text-xs text-gray-500 md:px-6">
+        <div className="mx-auto max-w-content break-words px-4 py-4 text-xs leading-relaxed text-gray-500 md:px-6">
           Copyrights 2008-26. All Rights Reserved.{" "}
           <a href="#" className="hover:text-jd-blue hover:underline">Privacy</a>
           {" | "}

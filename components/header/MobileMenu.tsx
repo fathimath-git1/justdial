@@ -14,7 +14,7 @@ export function MobileMenu() {
       <button
         aria-label="Open menu"
         onClick={() => setOpen(true)}
-        className="rounded p-1.5 hover:bg-gray-100 lg:hidden"
+        className="ml-auto rounded p-2 hover:bg-gray-100 lg:hidden"
       >
         <Menu className="h-6 w-6 text-jd-text" />
       </button>
@@ -25,7 +25,7 @@ export function MobileMenu() {
             className="absolute inset-0 bg-black/40 animate-fade-slide"
             onClick={() => setOpen(false)}
           />
-          <div className="absolute right-0 top-0 h-full w-[82%] max-w-sm overflow-y-auto bg-white shadow-2xl">
+          <div className="absolute right-0 top-0 h-full w-[88%] max-w-[360px] overflow-y-auto bg-white shadow-2xl">
             <div className="flex items-center justify-between border-b border-jd-border px-4 py-3.5">
               <Image src="/images/navbar/jdlogosvg.svg" alt="Justdial" width={112} height={30} unoptimized />
               <button

@@ -5,7 +5,7 @@ export function TravelBookings() {
   return (
     <section className="mx-auto w-full max-w-[1400px] px-4 py-6 md:px-6">
       <div className="rounded-xl border border-jd-border bg-white px-5 py-7 md:px-[50px] md:py-[40px]">
-        <div className="flex flex-col gap-5 md:flex-row md:items-center md:gap-[50px]">
+        <div className="flex min-w-0 flex-col gap-5 md:flex-row md:items-center md:gap-[50px]">
           <div className="shrink-0 md:w-[240px] md:self-start md:mt-[8px]">
             <h3 className="text-[24px] font-medium text-jd-text">Travel Bookings</h3>
             <p className="mt-3 text-[14px] leading-[1.55] text-jd-text md:w-[280px]">
@@ -15,7 +15,7 @@ export function TravelBookings() {
               Explore More
             </a>
           </div>
-          <div className="grid grid-cols-3 gap-4 sm:grid-cols-5 md:w-[816px] md:flex-none md:gap-0">
+          <div className="grid min-w-0 grid-cols-3 gap-x-3 gap-y-5 sm:grid-cols-5 md:w-[816px] md:flex-none md:gap-0">
             {travelModes.map((mode) => (
               <a
                 key={mode.title}
@@ -36,7 +36,7 @@ export function TravelBookings() {
                     <span className="text-2xl">{mode.emoji}</span>
                   )}
                 </div>
-                <span className="mt-6 text-[16px] font-normal text-jd-text">{mode.title}</span>
+                <span className="mt-3 text-[14px] font-normal leading-tight text-jd-text sm:mt-4 sm:text-[16px] md:mt-6">{mode.title}</span>
                 {mode.note && (
                   <span className="mt-2 text-[13px] font-normal leading-[1.35] text-green-700">{mode.note}</span>
                 )}

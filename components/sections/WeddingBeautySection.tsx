@@ -9,9 +9,9 @@ import type { CardItem } from "@/lib/types";
 
 function GroupBox({ title, items }: { title: string; items: CardItem[] }) {
   return (
-    <div className="rounded-xl border border-jd-border bg-white px-[30px] pb-[18px] pt-[18px]">
+    <div className="min-w-0 rounded-xl border border-jd-border bg-white px-3 pb-4 pt-4 sm:px-5 md:px-[30px] md:pb-[18px] md:pt-[18px]">
       <h3 className="mb-3 text-lg font-medium text-jd-text">{title}</h3>
-      <div className="grid grid-cols-3 gap-x-[30px]">
+      <div className="grid grid-cols-3 gap-x-2 sm:gap-x-4 md:gap-x-[30px]">
         {items.map((item) => (
           <a key={item.title} href="#" className="group block text-center">
             <div className="relative aspect-[3/2] w-full overflow-hidden rounded-xl bg-gray-100">
@@ -25,7 +25,7 @@ function GroupBox({ title, items }: { title: string; items: CardItem[] }) {
                 />
               ) : null}
             </div>
-            <p className="mt-4 text-[13px] font-normal leading-tight text-jd-text group-hover:text-jd-blue transition-colors">
+            <p className="mt-2 text-[11px] font-normal leading-tight text-jd-text group-hover:text-jd-blue transition-colors sm:mt-3 sm:text-[13px] md:mt-4">
               {item.title}
             </p>
           </a>
