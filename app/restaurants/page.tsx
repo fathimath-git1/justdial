@@ -4,6 +4,13 @@ import { ArrowRight, ChevronRight } from "lucide-react";
 import { LocationSelector } from "@/components/header/LocationSelector";
 import { SearchBar } from "@/components/header/SearchBar";
 import { SideRail } from "@/components/ui/SideRail";
+import { SocialBar } from "@/components/footer/SocialBar";
+import { AboutSection } from "@/components/sections/AboutSection";
+import { ServicesGrid } from "@/components/sections/ServicesGrid";
+import { PopularCategories } from "@/components/sections/PopularCategories";
+import { PopularCitiesBar } from "@/components/sections/PopularCitiesBar";
+import { Footer } from "@/components/footer/Footer";
+import { BackToTop } from "@/components/ui/BackToTop";
 
 const categories = [
   { title: "Indian Flavours", image: "i_indianflavours.jpg", items: ["Gomantak", "Maharashtrian", "Rajasthani", "Biryani"] },
@@ -35,12 +42,12 @@ export default function RestaurantsPage() {
   return (
     <main className="mx-auto min-h-screen w-full bg-white md:w-[calc(100%-100px)]">
       <header className="sticky top-0 z-30 border-b border-gray-200 bg-white">
-        <div className="mx-auto flex h-[78px] max-w-[1800px] flex-wrap items-center gap-4 px-5 lg:flex-nowrap lg:px-8">
+        <div className="mx-auto flex min-h-[98px] w-full max-w-[1800px] flex-wrap items-center gap-x-3 gap-y-2 px-3 py-2 lg:h-[78px] lg:min-h-0 lg:flex-nowrap lg:gap-4 lg:px-8">
           <Link href="/" aria-label="Justdial home" className="shrink-0">
-            <Image src="/images/navbar/jdlogosvg.svg" alt="Justdial" width={120} height={36} unoptimized className="h-auto w-[120px]" />
+            <Image src="/images/navbar/jdlogosvg.svg" alt="Justdial" width={120} height={36} unoptimized className="h-auto w-[96px] sm:w-[120px]" />
           </Link>
-          <LocationSelector large className="w-[246px] shrink-0" />
-          <div className="min-w-[240px] flex-1"><SearchBar large placeholder="Restaurant Collections" initialValue="Restaurant Collections" /></div>
+          <LocationSelector large className="w-[calc(100%-108px)] min-w-0 flex-1 sm:w-[calc(100%-132px)] lg:w-[246px] lg:flex-none" />
+          <div className="min-w-0 basis-full lg:min-w-[240px] lg:flex-1"><SearchBar large placeholder="Restaurant Collections" initialValue="Restaurant Collections" /></div>
           <nav className="ml-auto hidden shrink-0 items-center gap-4 text-[16px] text-gray-800 xl:flex">
             <a href="#" className="hover:text-blue-600">EN⌄</a>
             <a href="#" className="hover:text-blue-600">⚑ Advertise</a>
@@ -51,11 +58,13 @@ export default function RestaurantsPage() {
       </header>
       <SideRail />
 
-      <section className="relative mx-auto h-[300px] w-full overflow-visible sm:h-[286px] lg:h-[286px]">
-        <Image src="/images/restaurant-page/resfilter_banner_image.png" alt="A spread of delicious food" fill priority sizes="100vw" className="object-cover" />
-        <div className="absolute inset-0 bg-black/35" />
-        <h1 className="absolute inset-x-4 top-1/2 -translate-y-1/2 text-center text-3xl font-semibold tracking-wide text-white sm:text-4xl lg:text-[43px]">IT&apos;S ALL ABOUT FOOD</h1>
-        <div className="absolute inset-x-4 -bottom-[35px] z-10 mx-auto grid max-w-[884px] grid-cols-1 gap-3 sm:inset-x-8 sm:grid-cols-3 sm:gap-5 lg:gap-10">
+      <section className="relative mx-auto w-full overflow-visible">
+        <div className="relative h-[220px] w-full sm:h-[286px]">
+          <Image src="/images/restaurant-page/resfilter_banner_image.png" alt="A spread of delicious food" fill priority sizes="100vw" className="object-cover" />
+          <div className="absolute inset-0 bg-black/35" />
+          <h1 className="absolute inset-x-4 top-1/2 -translate-y-1/2 text-center text-[26px] font-semibold tracking-wide text-white sm:text-4xl lg:text-[43px]">IT&apos;S ALL ABOUT FOOD</h1>
+        </div>
+        <div className="relative z-10 mx-auto -mt-3 grid w-[calc(100%-24px)] max-w-[884px] grid-cols-1 gap-2 sm:absolute sm:inset-x-8 sm:bottom-[-35px] sm:mt-0 sm:w-auto sm:grid-cols-3 sm:gap-5 lg:gap-10">
           {features.map((feature) => (
             <a key={feature.title} href="#restaurant-categories" className="flex h-[70px] items-center justify-center gap-4 rounded-2xl border border-gray-300 bg-white px-3 shadow-sm transition hover:border-blue-400 hover:shadow-md sm:h-[70px] sm:gap-5">
               <Image src={`/images/restaurant-page/${feature.icon}`} alt="" width={50} height={50} unoptimized className="h-[46px] w-[46px] shrink-0 object-contain" />
@@ -68,7 +77,7 @@ export default function RestaurantsPage() {
         </div>
       </section>
 
-      <section id="restaurant-categories" className="mx-auto max-w-[1750px] px-4 pb-12 pt-[76px] sm:px-6 lg:px-6 lg:pt-[90px]">
+      <section id="restaurant-categories" className="mx-auto w-full max-w-[1750px] px-4 pb-12 pt-8 sm:px-6 lg:px-6 lg:pt-[90px]">
         <div className="grid grid-cols-1 gap-5 min-[520px]:grid-cols-2 xl:grid-cols-6 xl:gap-[30px]">
           {categories.map((category) => (
             <article key={category.title} className="overflow-hidden rounded-[18px] border border-gray-300 bg-white">
@@ -88,7 +97,7 @@ export default function RestaurantsPage() {
         <div className="mt-10 text-center">
           <button className="w-full max-w-[540px] rounded-[10px] bg-[#0876ce] px-8 py-4 text-[19px] font-medium text-white transition hover:bg-blue-700">View All Categories</button>
         </div>
-        <article className="mt-[120px] px-2 text-[18px] leading-[1.5] text-gray-950">
+        <article className="mt-16 px-2 text-[15px] leading-[1.5] text-gray-950 sm:mt-[120px] sm:text-[18px]">
           <h2 className="mb-3 font-bold">Unveiling the Culinary Treasures: Exploring Local Restaurants &amp; Eateries near Malappuram</h2>
           <p className="mb-3">Welcome to the vibrant world of local restaurants, where every dish tells a story and every bite is an adventure! In this article, we will take a delightful journey through the bustling streets and cozy corners of your neighborhood to discover the hidden gems known as eateries, food places, and top-rated restaurants. From savory sensations to sweet delights, there&apos;s something for every palate in these food spots that define the essence of culinary excellence.</p>
 
@@ -117,9 +126,9 @@ export default function RestaurantsPage() {
         </article>
       </section>
 
-      <section className="border-t border-gray-200 px-8 pb-10 pt-2 sm:px-10 lg:px-[40px]">
-        <h2 className="mb-8 text-[22px] font-normal leading-tight text-gray-950">Frequently Asked Questions</h2>
-        <div className="space-y-3 text-[18px] leading-[1.5] text-gray-950">
+      <section className="border-t border-gray-200 px-4 pb-10 pt-4 sm:px-8 sm:pt-2 lg:px-[40px]">
+        <h2 className="mb-6 text-[20px] font-normal leading-tight text-gray-950 sm:mb-8 sm:text-[22px]">Frequently Asked Questions</h2>
+        <div className="space-y-4 text-[15px] leading-[1.5] text-gray-950 sm:space-y-3 sm:text-[18px]">
           {restaurantFaqs.map((faq, index) => (
             <div key={faq.question}>
               <h3 className="font-bold">{index + 1}. {faq.question}</h3>
@@ -129,32 +138,13 @@ export default function RestaurantsPage() {
         </div>
       </section>
 
-      <section className="flex min-h-[112px] flex-col justify-between gap-5 border-y border-gray-200 px-8 py-8 sm:flex-row sm:items-center sm:px-10 lg:px-[44px]">
-        <div className="flex items-center gap-5">
-          <span className="whitespace-nowrap text-[18px] font-medium text-gray-700">Follow us on</span>
-          <div className="flex items-center gap-2">
-            {[
-              ["Facebook", "flw_facebook_active.svg"],
-              ["YouTube", "flw_youtube_active.svg"],
-              ["Instagram", "flw_insta_active.svg"],
-              ["LinkedIn", "flw_linkedIn_active.svg"],
-              ["Twitter", "flw_twitter_active.svg"],
-            ].map(([name, image]) => (
-              <a key={name} href="#" aria-label={name} className="transition-opacity hover:opacity-80">
-                <Image src={`/images/restaurant-page/${image}`} alt="" width={30} height={30} unoptimized className="h-[30px] w-[30px]" />
-              </a>
-            ))}
-          </div>
-        </div>
-        <div className="flex items-center gap-3 sm:ml-auto">
-          <a href="#" aria-label="Get it on Google Play">
-            <Image src="/images/restaurant-page/getapp_googleplay.avif" alt="Get it on Google Play" width={100} height={30} unoptimized className="h-[30px] w-[100px] object-contain" />
-          </a>
-          <a href="#" aria-label="Download on the App Store">
-            <Image src="/images/restaurant-page/getapp_appstore.avif" alt="Download on the App Store" width={100} height={30} unoptimized className="h-[30px] w-[100px] object-contain" />
-          </a>
-        </div>
-      </section>
+      <SocialBar />
+      <AboutSection />
+      <ServicesGrid />
+      <PopularCategories />
+      <PopularCitiesBar />
+      <Footer />
+      <BackToTop />
     </main>
   );
 }
