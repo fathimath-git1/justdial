@@ -52,6 +52,17 @@ export interface NewsItem {
   overlay?: string;
 }
 
+export interface RecentActivityItem {
+  title: string;
+  location: string;
+  image?: string;
+  reviewerName: string;
+  reviewerImage?: string;
+  reviewerRole: string;
+  rating: number;
+  review: string;
+}
+
 export interface FooterLink {
   label: string;
   href: string;

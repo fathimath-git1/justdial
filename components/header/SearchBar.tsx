@@ -2,7 +2,7 @@
 
 import { useMemo, useRef, useState, useEffect } from "react";
 import Image from "next/image";
-import { Search } from "lucide-react";
+import { Search, X } from "lucide-react";
 
 const BASE_SUGGESTIONS = [
   "Restaurants", "Restaurants Near Me", "Best Restaurants", "Restaurants in Kochi",
@@ -11,8 +11,8 @@ const BASE_SUGGESTIONS = [
   "Spa & Salons", "Spa Near Me", "Best Spa & Salons", "Spa & Salons in Kochi",
 ];
 
-export function SearchBar({ compact = false }: { compact?: boolean }) {
-  const [value, setValue] = useState("");
+export function SearchBar({ compact = false, large = false, placeholder = "Search for Spa & Salons", initialValue = "" }: { compact?: boolean; large?: boolean; placeholder?: string; initialValue?: string }) {
+  const [value, setValue] = useState(initialValue);
   const [open, setOpen] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
 
@@ -48,10 +48,11 @@ export function SearchBar({ compact = false }: { compact?: boolean }) {
             setOpen(true);
           }}
           onFocus={() => value && setOpen(true)}
-          placeholder="Search for Spa & Salons"
+          placeholder={placeholder}
           aria-label="Search for businesses and services"
-          className={`w-full text-gray-700 placeholder:text-gray-400 outline-none ${compact ? "text-[13px]" : "text-[13px]"}`}
+          className={`w-full text-gray-700 placeholder:text-gray-400 outline-none ${compact ? "text-[13px]" : large ? "text-[17px]" : "text-[13px]"}`}
         />
+        {value && <button type="button" aria-label="Clear search" onClick={() => setValue("")} className="flex h-9 w-7 shrink-0 items-center justify-center text-gray-800 hover:text-jd-blue"><X className="h-5 w-5" /></button>}
         <button
           type="button"
           aria-label="Search by voice"

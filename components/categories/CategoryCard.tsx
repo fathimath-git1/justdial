@@ -1,14 +1,15 @@
 import { getIcon } from "@/lib/icon-map";
 import type { Category } from "@/lib/types";
 import Image from "next/image";
+import Link from "next/link";
 
 export function CategoryCard({ category }: { category: Category }) {
   const Icon = getIcon(category.iconKey);
   const isPopular = category.title === "Popular Categories";
 
   return (
-    <a
-      href="#"
+    <Link
+      href={category.title === "Restaurants" ? "/restaurants" : "#"}
       className="group flex flex-col items-center gap-2 text-center"
       aria-label={category.title}
     >
@@ -43,6 +44,6 @@ export function CategoryCard({ category }: { category: Category }) {
           </span>
         )}
       </span>
-    </a>
+    </Link>
   );
 }

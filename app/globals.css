@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -17,7 +19,7 @@ html {
 body {
   color: var(--foreground);
   background: #ededed;
-  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-family: "Poppins", Arial, "Helvetica Neue", Helvetica, sans-serif;
 }
 
 /* Thin scrollbar for horizontal scroll rows */

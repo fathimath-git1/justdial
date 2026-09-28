@@ -9,9 +9,10 @@ import { cn } from "@/lib/utils";
 interface LocationSelectorProps {
   className?: string;
   compact?: boolean;
+  large?: boolean;
 }
 
-export function LocationSelector({ className, compact = false }: LocationSelectorProps) {
+export function LocationSelector({ className, compact = false, large = false }: LocationSelectorProps) {
   const [open, setOpen] = useState(false);
   const [query, setQuery] = useState("");
   const [selected, setSelected] = useState("Malappuram");
@@ -37,7 +38,7 @@ export function LocationSelector({ className, compact = false }: LocationSelecto
         type="button"
         aria-label="Choose your location"
         onClick={() => setOpen((v) => !v)}
-        className={`flex w-full items-center gap-2 rounded-md border border-gray-300 bg-gray-50 px-3 text-left text-gray-700 hover:bg-gray-100 transition-colors duration-200 ${compact ? "h-12 text-xs" : "h-[51px] text-[13px]"}`}
+        className={`flex w-full items-center gap-2 rounded-md border border-gray-300 bg-gray-50 px-3 text-left text-gray-700 hover:bg-gray-100 transition-colors duration-200 ${compact ? "h-12 text-xs" : large ? "h-[51px] text-[17px]" : "h-[51px] text-[13px]"}`}
       >
         <Image src="/images/navbar/location_icon.svg" alt="" width={14} height={18} unoptimized className={`${compact ? "h-[22px] w-[18px]" : "h-[18px] w-[14px]"} shrink-0`} />
         <span className="truncate">{selected}</span>

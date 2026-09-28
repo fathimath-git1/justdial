@@ -7,6 +7,7 @@
   PopularSearchItem,
   MovieItem,
   NewsItem,
+  RecentActivityItem,
   FooterLink,
 } from "./types";
 
@@ -170,6 +171,69 @@ export const rainyDayEssentials: PopularSearchItem[] = [
   { title: "Rainwear Dealers", cta: "Explore", image: "/images/rainy-day/10101239.avif" },
 ];
 
+export const recentActivities: RecentActivityItem[] = [
+  {
+    title: "Chicking",
+    location: "Kondotty - Malappuram",
+    image: "/images/chicking-malappuram-7bipdjijw0.jpg",
+    reviewerName: "Anjali",
+    reviewerImage: "/images/user10.png",
+    reviewerRole: "Wrote a review",
+    rating: 5,
+    review: "Your staff gopika provide a head by service good service,and good behaviour, friendly staff,well trained, great and amazing awesome service ...she is soo excellent cute...",
+  },
+  {
+    title: "The Charcoal Bay",
+    location: "Edappal - Malappuram",
+    image: "/images/the-charcoal-bay-malappuram-1jyydqqngs.jpg",
+    reviewerName: "Suma",
+    reviewerImage: "/images/user77.png",
+    reviewerRole: "Wrote a review",
+    rating: 5,
+    review: "Delicious, worth for money and fast delivery.",
+  },
+  {
+    title: "Khayal Residency Tirur",
+    location: "Tirur - Malappuram",
+    image: "/images/khayal-residency-tirur-tirur-malappuram-hotels-ftkvysh93b.jpg",
+    reviewerName: "Babu",
+    reviewerImage: "/images/user87.png",
+    reviewerRole: "Wrote a review",
+    rating: 5,
+    review: "Better Atmosphere than other hotels in tirur town. More safe that is nearest to railway station.",
+  },
+  {
+    title: "National Glass House",
+    location: "Tirur - Malappuram",
+    image: "/images/national-glass-house-tirur-malappuram-hardware-shops-emntgo0mt6.jpg",
+    reviewerName: "Saheed",
+    reviewerImage: "/images/user15.png",
+    reviewerRole: "Wrote a review",
+    rating: 5,
+    review: "I had a great experience with National Glass House. Their products are of good quality and reasonably priced. I found it easy to return items if needed. The staff were polite and helpful.",
+  },
+  {
+    title: "Hr Driving School",
+    location: "Maranchery - Malappuram",
+    image: "/images/hr-driving-school-marancheri-malappuram-7mokezep25.jpg",
+    reviewerName: "Shifna shirin",
+    reviewerImage: "/images/user54.png",
+    reviewerRole: "Wrote a review",
+    rating: 5,
+    review: "I recently enrolled in HR Driving School, and I couldn't be happier with my experience! The certified trainers are not only knowledgeable but also incredibly patient and friendly.",
+  },
+  {
+    title: "Mabbit Hotels & Resorts",
+    location: "Kottakkal - Malappuram",
+    image: "/images/mabbit-hotels-and-resorts-edarikode-malappuram-resorts-ua7w1g2poh.jpg",
+    reviewerName: "ABU",
+    reviewerImage: "/images/user32.png",
+    reviewerRole: "Wrote a review",
+    rating: 5,
+    review: "My stay at Mabbit Hotels & Resorts this month was exceptional! The staff were incredibly nice and attentive, creating a warm atmosphere. Booking was quick and hassle-free.",
+  },
+];
+
 export const newsItems: NewsItem[] = [
   { title: "Mysterious radio signal coming from planet outside Solar System for first time", source: "India Today", image: "/images/news/radio-signal.jpg" },
   { title: "Albanese slams OpenAI over Medicare portal breach disclosure delay", source: "India Today", image: "/images/news/albanese-openai.jpg", overlay: "INDIA TODAY | PTI: International" },
@@ -308,7 +372,6 @@ export const jdVerticals: { heading: string; items: string[] }[] = [
   { heading: "Cricket", items: ["Cricket", "Apparel", "Construction & Real Estate", "Entertainment", "Housekeeping & Facility Management", "Office & School Supplies", "Rubber & Plastics", "Travel"] },
   { heading: "Guides", items: ["Guides", "Astrology", "Education", "Events & Wedding", "Industrial Plants & Machinery", "Packaging & Printing", "Security & Protection", "Watches & Eyewear"] },
 ];
-
 
 
 
