@@ -43,8 +43,8 @@ export default function RestaurantsPage() {
     <main className="mx-auto min-h-screen w-full bg-white md:w-[calc(100%-100px)]">
       <header className="sticky top-0 z-30 border-b border-gray-200 bg-white">
         <div className="mx-auto flex min-h-[98px] w-full max-w-[1800px] flex-wrap items-center gap-x-3 gap-y-2 px-3 py-2 lg:h-[78px] lg:min-h-0 lg:flex-nowrap lg:gap-4 lg:px-8">
-          <Link href="/" aria-label="Justdial home" className="shrink-0">
-            <Image src="/images/navbar/jdlogosvg.svg" alt="Justdial" width={120} height={36} unoptimized className="h-auto w-[96px] sm:w-[120px]" />
+          <Link href="/" aria-label="OSKA Ventures LLP home" className="shrink-0">
+            <Image src="/images/oska-logo.png" alt="OSKA Ventures LLP" width={64} height={64} className="h-12 w-12 object-contain sm:h-14 sm:w-14" />
           </Link>
           <LocationSelector large className="w-[calc(100%-108px)] min-w-0 flex-1 sm:w-[calc(100%-132px)] lg:w-[246px] lg:flex-none" />
           <div className="min-w-0 basis-full lg:min-w-[240px] lg:flex-1"><SearchBar large placeholder="Restaurant Collections" initialValue="Restaurant Collections" /></div>
