@@ -13,7 +13,7 @@ function GroupBox({ title, items }: { title: string; items: CardItem[] }) {
       <h3 className="mb-3 text-lg font-medium text-jd-text">{title}</h3>
       <div className="grid grid-cols-3 gap-x-2 sm:gap-x-4 md:gap-x-[30px]">
         {items.map((item) => (
-          <a key={item.title} href="#" className="group block text-center">
+          <a key={item.title} href={item.title === "Banquet Halls" ? "/banquet-halls" : "#"} className="group block text-center">
             <div className="relative aspect-[3/2] w-full overflow-hidden rounded-xl bg-gray-100">
               {item.image ? (
                 <Image

@@ -19,7 +19,7 @@ export function TravelBookings() {
             {travelModes.map((mode) => (
               <a
                 key={mode.title}
-                href="#"
+                href={mode.title === "Flight" ? "/flight" : "#"}
                 className="group flex flex-col items-center text-center"
               >
                 <div className="flex h-[70px] w-[70px] items-center justify-center rounded-xl border border-jd-border bg-white p-2.5 group-hover:border-jd-blue transition-colors duration-150 md:h-[94px] md:w-[94px] md:p-0">
