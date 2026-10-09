@@ -29,8 +29,7 @@ export default function FlightPage() {
       <header className="border-b border-[#7896b2] bg-white">
         <div className="mx-auto flex max-w-[1300px] flex-wrap items-center justify-between gap-3 px-4 py-4 sm:px-6">
           <Link href="/" aria-label="Justdial home" className="flex items-end">
-            <Image src="/images/navbar/jdlogosvg.svg" alt="Justdial" width={142} height={40} unoptimized className="h-auto w-[112px] sm:w-[142px]" />
-            <span className="mb-0.5 text-[12px] text-[#5d6570]">TRAVEL</span>
+            <Image src="/images/oska-logo.png" alt="OSKA Ventures LLP" width={72} height={72} className="h-[56px] w-[56px] object-contain sm:h-[72px] sm:w-[72px]" />
           </Link>
           <div className="flex gap-4 text-sm text-[#53616d]"><a href="#login">LOGIN</a><a href="#signup">SIGNUP</a></div>
           <nav className="order-3 flex w-full flex-wrap justify-center gap-x-5 gap-y-2 px-1 pt-2 text-[13px] sm:gap-x-8 sm:text-[15px] lg:gap-x-12">
@@ -78,8 +77,8 @@ export default function FlightPage() {
       </section>
 
       <section id="travel-options" className="mx-auto max-w-[1280px] px-5 py-8 text-[15px] leading-[1.35] sm:px-8 sm:py-10">
-        <h1 className="mb-5 text-lg font-bold">Book Flight Tickets Online with <span className="text-[#0876ce]">Go<span className="text-orange-600">Jd</span></span></h1>
-        <p className="mb-6">The faster life moves the faster we need to. Justdial now brings to you a quick and easy way to book flights online. With an excellent range of airlines to choose from, finding the flight to suit your preference and schedule just got easier. We furnish you with all the details of your flight and offer you convenience through the entire online flight booking process.</p>
+        <h1 className="mb-5 text-lg font-bold">Book Flight Tickets Online with OSKA Ventures LLP</h1>
+        <p className="mb-6">The faster life moves the faster we need to. OSKA Ventures LLP brings you a quick and easy way to book flights online. With an excellent range of airlines to choose from, finding the flight to suit your preference and schedule just got easier. We furnish you with all the details of your flight and offer you convenience through the entire online flight booking process.</p>
         <p>Save on cheap domestic flight tickets to Delhi, Mumbai, Bangalore, Kolkata and Chennai with airlines like IndiGo, Spicejet, Go Air, Air India, Jet Airways and Jetlite. With our extensive reach in travel partners, Justdial offers you online flight ticket booking to top tourist and business destinations in the country as well as other cities. You can also compare flight tickets across airlines for the destination of your choice.</p>
 
         <div className="my-12 grid gap-8 md:grid-cols-2">

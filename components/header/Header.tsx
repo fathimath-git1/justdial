@@ -19,7 +19,7 @@ export function Header() {
 
   const Logo = ({ compact = false }: { compact?: boolean }) => (
     <Link href="/" aria-label="Justdial home" className="shrink-0">
-      <Image src="/images/navbar/jdlogosvg.svg" alt="Justdial" width={compact ? 98 : 98} height={26} priority unoptimized className="h-auto w-[98px]" />
+      <Image src="/images/oska-logo.png" alt="OSKA Ventures LLP" width={64} height={64} priority className={compact ? "h-10 w-10 object-contain" : "h-14 w-14 object-contain"} />
     </Link>
   );
 
