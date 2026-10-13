@@ -49,3 +49,10 @@ body {
 .animate-fade-slide {
   animation: fadeSlide 0.35s ease-out;
 }
+
+/* Hide Next.js dev error overlay badge and toast */
+nextjs-portal,
+[data-nextjs-toast],
+[data-nextjs-dialog-overlay] {
+  display: none !important;
+}

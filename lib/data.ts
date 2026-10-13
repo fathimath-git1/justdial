@@ -1,4 +1,4 @@
-﻿import type {
+import type {
   Category,
   CardItem,
   TravelModeItem,
@@ -138,11 +138,11 @@ export const trendingSearchesNearYou: PopularSearchItem[] = [
 ];
 
 export const latestMovies: MovieItem[] = [
-  { title: "Bethlehem Kudumba Unit (Malayalam Movie)", lang: "Malayalam · 2D", rating: 80, image: "/images/movies/centralized_162839122026_06_15_12_20_28_220.jpg" },
-  { title: "Pradhama Drishtiya Kuttakkar (Malayalam Movie)", lang: "Malayalam · 2D", image: "/images/movies/centralized_162961822026_08_18_10_03_26_220.jpg" },
-  { title: "Its A Medical Miracle (Malayalam Movie)", lang: "Malayalam · 2D", image: "/images/movies/centralized_163043012026_09_04_04_46_48_220.jpg" },
-  { title: "Mandaadi (Tamil Movie)", lang: "Tamil · 2D", rating: 84, image: "/images/movies/centralized_161949072025_07_04_01_21_36_220.jpg" },
-  { title: "Aasha (2026 Film) (Malayalam Movie)", lang: "Malayalam · 2D", image: "/images/movies/centralized_163053682026_09_10_10_02_18_220.jpg" },
+  { title: "Bethlehem Kudumba Unit (Malayalam Movie)", lang: "Malayalam � 2D", rating: 80, image: "/images/movies/centralized_162839122026_06_15_12_20_28_220.jpg" },
+  { title: "Pradhama Drishtiya Kuttakkar (Malayalam Movie)", lang: "Malayalam � 2D", image: "/images/movies/centralized_162961822026_08_18_10_03_26_220.jpg" },
+  { title: "Its A Medical Miracle (Malayalam Movie)", lang: "Malayalam � 2D", image: "/images/movies/centralized_163043012026_09_04_04_46_48_220.jpg" },
+  { title: "Mandaadi (Tamil Movie)", lang: "Tamil � 2D", rating: 84, image: "/images/movies/centralized_161949072025_07_04_01_21_36_220.jpg" },
+  { title: "Aasha (2026 Film) (Malayalam Movie)", lang: "Malayalam � 2D", image: "/images/movies/centralized_163053682026_09_10_10_02_18_220.jpg" },
 ];
 
 export const touristPlaces: TouristPlace[] = [
@@ -342,7 +342,8 @@ export const jdCollections: string[] = [
 ];
 
 export const quickLinks: FooterLink[] = [
-  { label: "About us", href: "#" },
+  { label: "About us", href: "/about-us" },
+  { label: "Contact Us", href: "/contact-us" },
   { label: "Investor Relations", href: "#" },
   { label: "We're hiring", href: "#" },
   { label: "Customer Care", href: "#" },
@@ -372,6 +373,7 @@ export const jdVerticals: { heading: string; items: string[] }[] = [
   { heading: "Cricket", items: ["Cricket", "Apparel", "Construction & Real Estate", "Entertainment", "Housekeeping & Facility Management", "Office & School Supplies", "Rubber & Plastics", "Travel"] },
   { heading: "Guides", items: ["Guides", "Astrology", "Education", "Events & Wedding", "Industrial Plants & Machinery", "Packaging & Printing", "Security & Protection", "Watches & Eyewear"] },
 ];
+
 
 
 
